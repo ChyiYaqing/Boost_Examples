@@ -26,7 +26,16 @@
     <ClCompile Include="src\pch.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Chater1.Boost.SmartPointers.cpp">
+    <ClCompile Include="Chapter2.Boost.PointerContainer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapter5.Boost.StringAlgorithms.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapter6.Boost.LexicalCast.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapter7.Boost.Format.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

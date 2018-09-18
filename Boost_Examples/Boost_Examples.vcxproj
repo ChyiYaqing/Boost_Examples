@@ -22,7 +22,10 @@
     <ClInclude Include="include\pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Chater1.Boost.SmartPointers.cpp" />
+    <ClCompile Include="Chapter2.Boost.PointerContainer.cpp" />
+    <ClCompile Include="Chapter5.Boost.StringAlgorithms.cpp" />
+    <ClCompile Include="Chapter6.Boost.LexicalCast.cpp" />
+    <ClCompile Include="Chapter7.Boost.Format.cpp" />
     <ClCompile Include="src\Boost_Examples.cpp" />
     <ClCompile Include="src\pch.cpp" />
   </ItemGroup>
