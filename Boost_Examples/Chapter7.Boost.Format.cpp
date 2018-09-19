@@ -1,4 +1,4 @@
-//#include "pch.h"
+#include "pch.h"
 #include <iostream>
 // Boost.Format offers a replacement for the function std::printf() allows formatted data output
 // Boost.Format provides a type-safe and extensible alternative 
@@ -30,6 +30,8 @@ struct animal{
 std::ostream &operator<<(std::ostream &os, const animal &a){
 	return os << a.name << ',' << a.legs;
 }
+
+#ifdef CHYI
 
 int main(int argc, char* argv[])
 {
@@ -71,3 +73,4 @@ int main(int argc, char* argv[])
 
 	return 0;
 }
+#endif // CHYI

@@ -22,10 +22,26 @@
     <ClInclude Include="include\pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Chapter10.Boost.Tokenizer.cpp" />
+    <ClCompile Include="Chapter12.Boost.MultiIndex.cpp" />
+    <ClCompile Include="Chapter13.Boost.Bimap.cpp" />
+    <ClCompile Include="Chapter14.Boost.Array.cpp" />
+    <ClCompile Include="Chapter15.Boost.Unordered.cpp" />
+    <ClCompile Include="Chapter16.Boost.CircularBuffer.cpp" />
+    <ClCompile Include="Chapter17.Boost.Heap.cpp" />
+    <ClCompile Include="Chapter18.Boost.Intrusive.cpp" />
     <ClCompile Include="Chapter2.Boost.PointerContainer.cpp" />
+    <ClCompile Include="Chapter21.Boost.Optional.cpp" />
+    <ClCompile Include="Chapter29.Boost.Algorithm.cpp" />
+    <ClCompile Include="Chapter30.Boost.Range.cpp" />
+    <ClCompile Include="Chapter31.Boost.Graph.cpp" />
+    <ClCompile Include="Chapter32.Boost.Asio.cpp" />
+    <ClCompile Include="Chapter32.Boost.Asio.IOServercesAndIOObjects.cpp" />
     <ClCompile Include="Chapter5.Boost.StringAlgorithms.cpp" />
     <ClCompile Include="Chapter6.Boost.LexicalCast.cpp" />
     <ClCompile Include="Chapter7.Boost.Format.cpp" />
+    <ClCompile Include="Chapter8.Boost.Regex.cpp" />
+    <ClCompile Include="Chapter9.Boost.Xpressive.cpp" />
     <ClCompile Include="src\Boost_Examples.cpp" />
     <ClCompile Include="src\pch.cpp" />
   </ItemGroup>
