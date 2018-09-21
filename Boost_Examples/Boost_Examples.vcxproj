@@ -38,6 +38,10 @@
     <ClCompile Include="Chapter32.Boost.Asio.cpp" />
     <ClCompile Include="Chapter33.Boost.Interprocess.cpp" />
     <ClCompile Include="Chapter36.Boost.DateTime.cpp" />
+    <ClCompile Include="Chapter37.Boost.Chrono.cpp" />
+    <ClCompile Include="Chapter38.Boost.Timer.cpp" />
+    <ClCompile Include="Chapter39.Boost.Phoenix.cpp" />
+    <ClCompile Include="Chapter44.Boost.Thread.cpp" />
     <ClCompile Include="Chapter5.Boost.StringAlgorithms.cpp" />
     <ClCompile Include="Chapter6.Boost.LexicalCast.cpp" />
     <ClCompile Include="Chapter7.Boost.Format.cpp" />

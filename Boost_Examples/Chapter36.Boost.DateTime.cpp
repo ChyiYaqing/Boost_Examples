@@ -11,6 +11,11 @@
 
 	Location-dependent Times:
 		boost::local_time::local_date_time, which is stores time-zone related data 
+
+	Formatted Input and Output :
+		Boost::DateTime lets you display results in differnt formats. Calendar dates and times can be formatted using
+			boost::date_time::date_facet 
+			boost::date_time::time_facet 
 */
 
 // Example 36.1. Creating a date with boost::gregorian::date 
@@ -54,6 +59,19 @@ using namespace boost::posix_time;
 #include <boost/date_time/local_time/local_time.hpp>
 
 using namespace boost::local_time;
+
+// Example 36.18. Location-dependent points in time and different time zones
+
+// Example 36.19. Using boost::local_time::local_time_period 
+
+// Example 36.20. A user-defined format for a date 
+
+// Example 36.21. Changing names of weekdays and months 
+#include <string>
+#include <vector>
+#include <locale>
+
+#ifdef CHYI
 
 int main(int argc, char* argv[])
 {
@@ -186,14 +204,58 @@ int main(int argc, char* argv[])
 	std::cout << *++it16 << '\n';
 
 	// Example 36.17. Using boost::local_time::local_date_time 
-	time_zone_ptr tz17{ new posix_time_zone{"CET+1"} };
+	time_zone_ptr tz17{ new posix_time_zone{"CET+1"} }; // CET is the abbreviation for Central Curopean Time.ÖÐÅ·Ê±¼ä
 	ptime pt17{ date{2014, 5, 12}, time_duration{12, 0,0} };
+
 	local_date_time dt17{ pt17, tz17 };
 	std::cout << dt17.utc_time() << '\n';
 	std::cout << dt17 << '\n';
 	std::cout << dt17.local_time() << '\n';
 	std::cout << dt17.zone_name() << '\n';
 
+	// Example 36.18. Location-dependent points in time and different time zones
+	time_zone_ptr tz18{ new posix_time_zone{"CET+8"} };
+	ptime pt18{ date{2014, 5, 12}, time_duration{12, 0, 0} };
+	local_date_time dt18{ pt18, tz18 };
+	std::cout << dt18.local_time() << '\n';
+
+	time_zone_ptr tz182{ new posix_time_zone{"EET+2"} };
+	std::cout << dt18.local_time_in(tz182).local_time() << '\n';
+
+	// Example 36.19. Using boost::local_time::local_time_period 
+	time_zone_ptr tz19{ new posix_time_zone{"CET+0"} };
+	ptime pt191{ date{2014, 12, 5}, time_duration{12, 0, 0} };
+	local_date_time dt191{ pt191, tz19 };
+
+	ptime pt192{ date{2014, 12, 5}, time_duration{18, 0, 0} };
+	local_date_time dt192{ pt192, tz19 };
+
+	local_time_period tp19{ dt191, dt192 };
+
+	std::cout.setf(std::ios::boolalpha);
+	std::cout << tp19.contains(dt191) << '\n';
+	std::cout << tp19.contains(dt192) << '\n';
+
+	// Example 36.20. A user-defined format for a date 
+	date d20{ 2014, 5, 12 };
+	date_facet *df20 = new date_facet{ "%A, %d %B %Y" };
+	std::cout.imbue(std::locale{ std::cout.getloc(), df20 });
+	std::cout << d20 << '\n';
+
+	// Example 36.21. Changing names of weekdays and months 
+	std::locale::global(std::locale{ "German" });
+	std::string months21[12]{ "Januar", "Februar", "M\xe4rz", "April",
+   "Mai", "Juni", "Juli", "August", "September", "Oktober",
+   "November", "Dezember" };
+	std::string weekdays[7]{ "Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag" };
+	date d21{ 2014, 5, 12 };
+	date_facet *df21 = new date_facet{ "%A, %d. %B %Y" };
+	df21->long_month_names(std::vector<std::string>{months21, months21 + 12});
+	df21->long_weekday_names(std::vector<std::string>{weekdays, weekdays + 7});
+	std::cout.imbue(std::locale{ std::cout.getloc(), df21 });
+	std::cout << d21 << '\n';
+
 
 	return 0;
 }
+#endif 
