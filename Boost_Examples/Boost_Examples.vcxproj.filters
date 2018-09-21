@@ -83,7 +83,10 @@
     <ClCompile Include="Chapter32.Boost.Asio.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Chapter32.Boost.Asio.IOServercesAndIOObjects.cpp">
+    <ClCompile Include="Chapter33.Boost.Interprocess.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapter36.Boost.DateTime.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

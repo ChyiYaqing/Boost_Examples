@@ -36,7 +36,8 @@
     <ClCompile Include="Chapter30.Boost.Range.cpp" />
     <ClCompile Include="Chapter31.Boost.Graph.cpp" />
     <ClCompile Include="Chapter32.Boost.Asio.cpp" />
-    <ClCompile Include="Chapter32.Boost.Asio.IOServercesAndIOObjects.cpp" />
+    <ClCompile Include="Chapter33.Boost.Interprocess.cpp" />
+    <ClCompile Include="Chapter36.Boost.DateTime.cpp" />
     <ClCompile Include="Chapter5.Boost.StringAlgorithms.cpp" />
     <ClCompile Include="Chapter6.Boost.LexicalCast.cpp" />
     <ClCompile Include="Chapter7.Boost.Format.cpp" />
